@@ -3,7 +3,7 @@ import TaskForm from "./components/TaskForm";
 import { tasks as data } from "./data/tasks";
 import { useState, useEffect } from "react";
 
-function App() {
+export default function App() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -32,5 +32,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
