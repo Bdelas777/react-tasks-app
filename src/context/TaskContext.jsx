@@ -6,13 +6,13 @@ export const TaskContext = createContext();
 export function TaskContextProvider(props) {
   const [tasks, setTasks] = useState([]);
 
-  function createTask(taskTitle, taskDescription) {
+  function createTask(task) {
     setTasks([
       ...tasks,
       {
-        title: taskTitle,
+        title: task.title,
         id: tasks.length,
-        description: taskDescription,
+        description: task.description,
       },
     ]);
   }
